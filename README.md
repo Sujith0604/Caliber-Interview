@@ -31,3 +31,14 @@ This project is a traffic signal system that consists of a **client** (frontend)
 - **npm** (Node Package Manager)
 
 ---
+
+## Setup Instructions
+
+### 1. Clone the Repository
+```bash
+git clone https://github.com/<your-username>/Caliber.git
+cd Caliber
+
+---
+
+##Server set up
