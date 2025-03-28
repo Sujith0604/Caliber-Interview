@@ -69,12 +69,12 @@ node websocketServer.js
 cd client
 ```
 
-### 1 install package
+### 1. install package
 ```bash
 npm install
 ```
 
-### 2 Start application
+### 2. Start application
 ```bash
 npm run dev
 ```
