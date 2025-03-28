@@ -36,9 +36,6 @@ This project is a traffic signal system that consists of a **client** (frontend)
 
 ### 1. Clone the Repository
 ```bash
-git clone https://github.com/<your-username>/Caliber.git
+git clone https://github.com/Sujith0604/Caliber-Interview.git
 cd Caliber
 
----
-
-##Server set up
