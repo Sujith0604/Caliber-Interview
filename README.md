@@ -38,4 +38,44 @@ This project is a traffic signal system that consists of a **client** (frontend)
 ```bash
 git clone https://github.com/Sujith0604/Caliber-Interview.git
 cd Caliber
+```
+### 2. Server Setup
+```bash
+cd server
+npm install
+```
+### 3. Postgre create table using query
+```bash
+CREATE TABLE signals (
+    id SERIAL PRIMARY KEY,
+    signal_id INT NOT NULL,
+    state VARCHAR(10) NOT NULL,
+    timestamp TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+);
+```
+
+### 4. Start the MQTT broker 
+```bash
+node mqttPublisher.js
+```
+
+### 5. Start the WebSocket server:
+```bash
+node websocketServer.js
+```
+
+### Client Setup
+```bash
+cd client
+```
+
+### 1 install package
+```bash
+npm install
+```
+
+### 2 Start application
+```bash
+npm run dev
+```
 
