@@ -37,7 +37,6 @@ const App = () => {
     <div className="min-h-screen bg-gray-100 p-10">
       <h1 className="text-3xl font-bold text-center mb-6">Signal Cards</h1>
 
-      {/* Render Two Signals */}
       {twoSignals.length > 0 && (
         <div className="signal-container flex flex-col lg:flex-row gap-6 justify-center">
           {twoSignals.map((signal) => (
@@ -50,7 +49,6 @@ const App = () => {
         </div>
       )}
 
-      {/* Render Three Signals */}
       {threeSignals.length > 0 && (
         <div className="signal-container flex flex-col lg:flex-row gap-6 justify-center mt-10">
           {threeSignals.map((signal) => (
@@ -63,7 +61,6 @@ const App = () => {
         </div>
       )}
 
-      {/* Default Message */}
       {twoSignals.length === 0 && threeSignals.length === 0 && (
         <div className="text-center text-gray-500">Waiting for signals...</div>
       )}
