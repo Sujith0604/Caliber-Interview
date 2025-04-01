@@ -1,17 +1,20 @@
 import { connect } from "mqtt";
 import pkg from "pg";
 const { Client } = pkg;
+import dotenv from "dotenv";
+
+dotenv.config();
 
 // Connect to MQTT broker
 const mqttClient = connect("mqtt://localhost");
 
 // Connect to PostgreSQL
 const dbClient = new Client({
-  user: "postgres",
-  host: "localhost",
-  database: "signals",
-  password: "12345678",
-  port: 5434,
+  user: process.env.USER,
+  host: process.env.HOST,
+  database: process.env.DATABASE,
+  password: process.env.PASSWORD,
+  port: process.env.PORT,
 });
 
 dbClient
