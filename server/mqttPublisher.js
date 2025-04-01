@@ -22,10 +22,10 @@ dbClient
 mqttClient.on("connect", () => {
   console.log("Connected to MQTT broker.");
 
-  let toggle = true;
+  let change = true;
 
   setInterval(() => {
-    const signals = toggle
+    const signals = change
       ? [
           {
             id: 1,
@@ -51,7 +51,7 @@ mqttClient.on("connect", () => {
           },
         ];
 
-    const topic = toggle ? "/signals/two" : "/signals/three";
+    const topic = change ? "/signals/two" : "/signals/three";
     mqttClient.publish(topic, JSON.stringify(signals));
     console.log(`Published to ${topic}:`, signals);
 
@@ -66,6 +66,6 @@ mqttClient.on("connect", () => {
         .catch((err) => console.error("Failed to store signal data:", err));
     });
 
-    toggle = !toggle;
+    change = !change;
   }, 2000);
 });
